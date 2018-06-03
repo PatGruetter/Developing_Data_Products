@@ -1,0 +1,84 @@
+---
+title: "My Fancy Presentation"
+author: "PG"
+date: "3 Juni 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+### Two different kind of lists
+
+A unordered list:
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+A ordered list:
+
+1. Item a
+2. Item b
+
+***
+A slide without a title
+
+## Another slide
+
+Plain text
+
+*italicized text*
+
+**Bold text**
+
+Some code (not to be run):
+
+`for (i %in% 1:10)`
+
+## A slide with code to be run
+
+```{r}
+head(mtcars)
+```
+
+```{r, comment="", echo=TRUE}
+head(mtcars)
+```
+
+## A slide with code to be run II
+
+```{r, comment="", eval=FALSE}
+# Doesn't show this comment unless global options are echo=TRUE
+```
+
+```{r, comment="", echo=TRUE, eval=FALSE}
+head(mtcars)
+```
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
+## My new slide
+
+```{r, fig.align='center', fig.cap='My AWESOME figure'}
+plot(mtcars$wt, mtcars$mpg, xlab = "Weight", ylab = "MPG")
+```
